@@ -1,0 +1,114 @@
+/* App global styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0;
+}
+
+/* Header styles */
+.app-header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Navigation styles */
+.nav-link {
+  @apply px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+}
+
+.nav-link:hover {
+  @apply bg-gray-100;
+}
+
+.nav-link.active {
+  @apply bg-blue-100 text-blue-700;
+}
+
+/* Footer styles */
+.app-footer {
+  background: #1f2937;
+  color: white;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.app-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Layout components */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-container {
+  @apply container mx-auto px-4 py-8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .page-container {
+    @apply px-2 py-4;
+  }
+}
+
+/* Loading states */
+.loading-container {
+  @apply flex items-center justify-center min-h-screen;
+}
+
+.loading-spinner {
+  @apply animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600;
+}
+
+/* Error states */
+.error-container {
+  @apply flex flex-col items-center justify-center min-h-screen text-center;
+}
+
+.error-container h1 {
+  @apply text-4xl font-bold text-gray-900 mb-4;
+}
+
+.error-container p {
+  @apply text-lg text-gray-600 mb-8;
+}
+
+/* Toast notifications */
+.toast {
+  @apply fixed top-4 right-4 z-50 max-w-sm;
+}
+
+.toast-message {
+  @apply bg-white border border-gray-200 rounded-lg shadow-lg p-4 mb-2;
+}
+
+.toast-success {
+  @apply border-green-200 bg-green-50;
+}
+
+.toast-error {
+  @apply border-red-200 bg-red-50;
+}
+
+.toast-info {
+  @apply border-blue-200 bg-blue-50;
+}
+

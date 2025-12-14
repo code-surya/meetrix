@@ -1,0 +1,80 @@
+.notification-bell {
+  position: relative;
+}
+
+.bell-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: var(--text-primary, #1a1a1a);
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.bell-button:hover {
+  background: var(--bg-hover, #f0f0f0);
+  color: var(--primary, #007bff);
+}
+
+.bell-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  background: var(--error, #dc3545);
+  color: white;
+  border-radius: 9px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 380px;
+  max-height: 600px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow: hidden;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .notification-dropdown {
+    width: calc(100vw - 2rem);
+    right: -1rem;
+    max-width: 380px;
+  }
+}
+

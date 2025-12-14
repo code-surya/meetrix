@@ -1,0 +1,348 @@
+.group-booking-option {
+  width: 100%;
+}
+
+.group-booking-header {
+  margin-bottom: 1.5rem;
+}
+
+.group-booking-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary, #1a1a1a);
+  margin: 0 0 0.5rem 0;
+}
+
+.group-booking-description {
+  color: var(--text-secondary, #666);
+  font-size: 0.9375rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.group-booking-card {
+  background: var(--bg-secondary, #f5f5f5);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 2px solid var(--border, #e0e0e0);
+}
+
+.group-booking-toggle {
+  margin-bottom: 1.5rem;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-slider {
+  position: relative;
+  width: 50px;
+  height: 28px;
+  background: var(--border, #e0e0e0);
+  border-radius: 14px;
+  transition: all 0.3s;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  top: 3px;
+  left: 3px;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-input:checked + .toggle-slider {
+  background: var(--primary, #007bff);
+}
+
+.toggle-input:checked + .toggle-slider::before {
+  transform: translateX(22px);
+}
+
+.toggle-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+}
+
+.group-booking-details {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border, #e0e0e0);
+}
+
+.discount-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.discount-badge {
+  padding: 0.75rem 1.25rem;
+  background: var(--success, #28a745);
+  color: white;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.discount-description {
+  margin: 0;
+  color: var(--text-secondary, #666);
+  font-size: 0.9375rem;
+  flex: 1;
+}
+
+.discount-breakdown {
+  margin-bottom: 1.5rem;
+}
+
+.discount-breakdown h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+  margin: 0 0 0.75rem 0;
+}
+
+.discount-tiers {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.discount-tiers li {
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  color: var(--text-secondary, #666);
+  font-size: 0.9375rem;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.discount-tiers li.active {
+  border-color: var(--success, #28a745);
+  background: var(--success-light, #d4edda);
+  color: var(--success, #28a745);
+  font-weight: 600;
+}
+
+.minimum-notice {
+  padding: 1rem;
+  background: var(--warning-light, #fff3cd);
+  border: 1px solid var(--warning, #ffc107);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.minimum-notice p {
+  margin: 0;
+  color: var(--warning-dark, #856404);
+  font-size: 0.9375rem;
+}
+
+.savings-preview {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.savings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.savings-amount {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--success, #28a745);
+}
+
+.group-management {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border, #e0e0e0);
+}
+
+.current-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.current-group p {
+  margin: 0;
+  color: var(--text-secondary, #666);
+  font-size: 0.9375rem;
+}
+
+.group-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.group-list {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border, #e0e0e0);
+}
+
+.available-groups {
+  margin-bottom: 1rem;
+}
+
+.available-groups h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+  margin: 0 0 1rem 0;
+}
+
+.group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border, #e0e0e0);
+}
+
+.group-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+}
+
+.group-info p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary, #666);
+}
+
+.join-group-btn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--primary, #007bff);
+  background: white;
+  color: var(--primary, #007bff);
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.join-group-btn:hover {
+  background: var(--primary, #007bff);
+  color: white;
+}
+
+.create-group-btn {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid var(--primary, #007bff);
+  background: var(--primary, #007bff);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.create-group-btn:hover {
+  background: var(--primary-dark, #0056b3);
+  border-color: var(--primary-dark, #0056b3);
+}
+
+.no-groups {
+  text-align: center;
+  color: var(--text-secondary, #666);
+  padding: 2rem;
+  font-size: 0.9375rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.625rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-size: 0.9375rem;
+}
+
+.btn-primary {
+  background: var(--primary, #007bff);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark, #0056b3);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--text-primary, #1a1a1a);
+  border: 2px solid var(--border, #e0e0e0);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary, #007bff);
+  color: var(--primary, #007bff);
+}
+
+@media (max-width: 768px) {
+  .group-booking-card {
+    padding: 1.5rem;
+  }
+
+  .discount-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .current-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .group-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .join-group-btn {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,250 @@
+.group-booking-step {
+  width: 100%;
+}
+
+.discount-info {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.discount-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.discount-badge svg {
+  color: #ffd700;
+}
+
+.discount-description {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.9375rem;
+}
+
+.group-error-message {
+  padding: 1rem;
+  background: var(--error-light, #fee);
+  color: var(--error, #dc3545);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.group-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.existing-groups {
+  margin-bottom: 1rem;
+}
+
+.existing-groups h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--text-primary, #1a1a1a);
+}
+
+.groups-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.group-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--border, #e0e0e0);
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.group-card:hover {
+  border-color: var(--primary, #007bff);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.group-card.selected {
+  border-color: var(--primary, #007bff);
+  background: rgba(0, 123, 255, 0.05);
+}
+
+.group-info h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: var(--text-primary, #1a1a1a);
+}
+
+.group-info p {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #666);
+  margin: 0;
+}
+
+.selected-indicator {
+  padding: 0.5rem 1rem;
+  background: var(--success, #28a745);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.select-group-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary, #007bff);
+  background: white;
+  color: var(--primary, #007bff);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.select-group-btn:hover {
+  background: var(--primary, #007bff);
+  color: white;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--border, #e0e0e0);
+  background: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary, #1a1a1a);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-button:hover {
+  border-color: var(--primary, #007bff);
+  color: var(--primary, #007bff);
+  background: rgba(0, 123, 255, 0.05);
+}
+
+.create-group-btn {
+  border-color: var(--primary, #007bff);
+  color: var(--primary, #007bff);
+}
+
+.join-group-btn {
+  border-color: var(--success, #28a745);
+  color: var(--success, #28a745);
+}
+
+.skip-btn {
+  border-style: dashed;
+  color: var(--text-secondary, #666);
+}
+
+.create-group-form,
+.join-group-form {
+  padding: 1.5rem;
+  border: 2px solid var(--border, #e0e0e0);
+  border-radius: 12px;
+  background: white;
+}
+
+.create-group-form h4,
+.join-group-form h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--text-primary, #1a1a1a);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid var(--border, #e0e0e0);
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary, #007bff);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.groups-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  color: var(--text-secondary, #666);
+}
+
+.selected-group-info {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--success-light, #d4edda);
+  border: 1px solid var(--success, #28a745);
+  border-radius: 8px;
+}
+
+.info-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--success, #28a745);
+  font-size: 0.9375rem;
+}
+
+.info-badge svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .group-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .group-actions {
+    width: 100%;
+  }
+
+  .select-group-btn {
+    width: 100%;
+  }
+}
+

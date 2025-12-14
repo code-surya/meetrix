@@ -1,0 +1,264 @@
+.qr-scanner {
+  width: 100%;
+}
+
+.scanner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.scanner-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+  margin: 0;
+}
+
+.scan-mode-toggle {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border, #e0e0e0);
+}
+
+.mode-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: white;
+  color: var(--text-secondary, #666);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mode-btn.active {
+  background: var(--primary, #007bff);
+  color: white;
+}
+
+.scanner-content {
+  margin-bottom: 2rem;
+}
+
+.camera-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--border, #e0e0e0);
+  background: #000;
+}
+
+.scanner-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scanner-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary, #f5f5f5);
+  color: var(--text-secondary, #666);
+}
+
+.placeholder-content {
+  text-align: center;
+}
+
+.placeholder-content svg {
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.placeholder-content p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.scanner-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary, #007bff);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark, #0056b3);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--text-primary, #1a1a1a);
+  border: 2px solid var(--border, #e0e0e0);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary, #007bff);
+  color: var(--primary, #007bff);
+}
+
+.scanner-error {
+  padding: 1rem;
+  background: var(--error-light, #fee);
+  color: var(--error, #dc3545);
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.scanner-error p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.scanning-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary, #007bff);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.manual-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.manual-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.manual-content h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+  margin: 0 0 1rem 0;
+}
+
+.manual-content p {
+  color: var(--text-secondary, #666);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.qr-scanner-unsupported,
+.qr-scanner-no-permission {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.unsupported-content,
+.no-permission-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.unsupported-content h3,
+.no-permission-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+  margin: 0 0 1rem 0;
+}
+
+.unsupported-content p,
+.no-permission-content p {
+  color: var(--text-secondary, #666);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.scanner-instructions {
+  background: var(--bg-secondary, #f5f5f5);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.scanner-instructions h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+  margin: 0 0 1rem 0;
+}
+
+.scanner-instructions ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: var(--text-secondary, #666);
+}
+
+.scanner-instructions li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .scanner-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .scan-mode-toggle {
+    justify-content: center;
+  }
+
+  .video-container {
+    height: 250px;
+  }
+
+  .scanner-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .manual-content {
+    padding: 1rem;
+  }
+}
+

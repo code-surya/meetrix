@@ -1,0 +1,82 @@
+.metric-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border, #e0e0e0);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.metric-icon {
+  font-size: 1.5rem;
+}
+
+.metric-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary, #666);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary, #1a1a1a);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.metric-change {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.metric-change.positive {
+  color: var(--success, #28a745);
+}
+
+.metric-change.negative {
+  color: var(--error, #dc3545);
+}
+
+.metric-change.neutral {
+  color: var(--text-secondary, #666);
+}
+
+.trend-icon {
+  font-size: 0.875rem;
+}
+
+.change-value {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .metric-card {
+    padding: 1rem;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+  }
+
+  .metric-header {
+    margin-bottom: 0.75rem;
+  }
+}

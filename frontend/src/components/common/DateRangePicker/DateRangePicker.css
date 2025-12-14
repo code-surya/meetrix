@@ -1,0 +1,139 @@
+.date-range-picker {
+  position: relative;
+  display: inline-block;
+}
+
+.date-picker-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  border: 2px solid var(--border, #e0e0e0);
+  border-radius: 8px;
+  background: white;
+  color: var(--text-primary, #1a1a1a);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 200px;
+}
+
+.date-picker-trigger:hover {
+  border-color: var(--primary, #007bff);
+  color: var(--primary, #007bff);
+}
+
+.date-picker-trigger svg {
+  transition: transform 0.2s;
+}
+
+.date-picker-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.date-picker-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 1.5rem;
+  border: 1px solid var(--border, #e0e0e0);
+}
+
+.quick-ranges {
+  margin-bottom: 1.5rem;
+}
+
+.quick-ranges h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+  margin: 0 0 0.75rem 0;
+}
+
+.quick-range-btn {
+  display: block;
+  width: 100%;
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--border, #e0e0e0);
+  background: white;
+  color: var(--text-primary, #1a1a1a);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.quick-range-btn:hover {
+  border-color: var(--primary, #007bff);
+  color: var(--primary, #007bff);
+  background: var(--primary-light, #f0f8ff);
+}
+
+.quick-range-btn:last-child {
+  margin-bottom: 0;
+}
+
+.custom-range h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a1a1a);
+  margin: 0 0 1rem 0;
+}
+
+.date-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.date-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.date-input-group label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary, #666);
+}
+
+.date-input-group input {
+  padding: 0.625rem;
+  border: 1px solid var(--border, #e0e0e0);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: var(--text-primary, #1a1a1a);
+}
+
+.date-input-group input:focus {
+  outline: none;
+  border-color: var(--primary, #007bff);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .date-picker-dropdown {
+    width: calc(100vw - 2rem);
+    right: -1rem;
+    max-width: 320px;
+  }
+
+  .date-inputs {
+    grid-template-columns: 1fr;
+  }
+}
+

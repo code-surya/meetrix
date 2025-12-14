@@ -1,0 +1,40 @@
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--error-light, #fee);
+  border: 1px solid var(--error, #dc3545);
+  border-radius: 8px;
+  color: var(--error, #dc3545);
+  gap: 1rem;
+}
+
+.error-message svg {
+  flex-shrink: 0;
+}
+
+.error-message p {
+  margin: 0;
+  font-size: 0.9375rem;
+  text-align: center;
+}
+
+.retry-btn {
+  padding: 0.625rem 1.5rem;
+  border: 1px solid var(--error, #dc3545);
+  background: white;
+  color: var(--error, #dc3545);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.retry-btn:hover {
+  background: var(--error, #dc3545);
+  color: white;
+}
+
