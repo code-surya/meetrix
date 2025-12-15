@@ -1,10 +1,8 @@
-# frozen_string_literal: true
-
-class AddDiscountFieldsToBookings < ActiveRecord::Migration[7.0]
+class AddDiscountFieldsToBookings < ActiveRecord::Migration[8.1]
   def change
-    add_column :bookings, :discount_amount, :decimal, precision: 10, scale: 2, default: 0.0
-    add_column :bookings, :discount_percentage, :decimal, precision: 5, scale: 2, default: 0.0
-    add_column :bookings, :published_at, :datetime
+    add_column :bookings, :discount_code, :string
+    add_column :bookings, :discount_percentage, :integer, default: 0
+
+    add_index :bookings, :discount_code
   end
 end
-

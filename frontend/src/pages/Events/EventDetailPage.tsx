@@ -80,17 +80,29 @@ const EventDetailPage = () => {
 
   return (
     <Container>
-      <div className="py-8">
+      <div className="py-12">
         {/* Event Header */}
-        <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
-          <div className="h-64 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
-            <div className="text-center text-white">
-              <h1 className="text-4xl font-bold mb-2">{event.title}</h1>
-              <p className="text-xl opacity-90">{event.category}</p>
+        <div className="card mb-12 fade-in">
+          <div className="relative">
+            <div className="h-80 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-t-2xl flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-black/10"></div>
+              <div className="text-center text-white z-10">
+                <h1 className="text-5xl font-bold mb-3">{event.title}</h1>
+                <p className="text-2xl opacity-90 font-medium">{event.category}</p>
+              </div>
+              <div className="absolute top-6 right-6">
+                <div className={`inline-flex px-4 py-2 text-sm font-semibold rounded-full backdrop-blur-sm ${
+                  event.status === 'published' ? 'bg-green-500/90 text-white' :
+                  event.status === 'draft' ? 'bg-yellow-500/90 text-white' :
+                  'bg-blue-500/90 text-white'
+                }`}>
+                  {event.status}
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="p-6">
+          <div className="p-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
               <div className="mb-4 md:mb-0">
                 <div className="flex items-center text-gray-600 mb-2">
